@@ -11,12 +11,14 @@ search.addEventListener('click', () => {
 const displayData = (data) => {
     const parent = document.getElementById('items');
     const searchInfo = document.getElementById('search-info');
+    const image = document.querySelector('#full-image');
     parent.innerHTML = '';
     spinner(parent);
     stopSpinning();
 
     if(data == undefined || data == '' || input.value == '' || data == null){
         searchInfo.innerHTML = `<h1 class="text-center text-muted display-6 fw-bolder align-self-center">Input Something</h1>`
+        image.innerHTML = ''
     }
     else{
         const call = () => {
