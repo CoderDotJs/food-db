@@ -38,7 +38,7 @@ const displayData = (data) => {
                     })
                     parent.appendChild(child);
                 })
-            }, 2000);
+            }, 1200);
         }
         call();
     }   
@@ -70,5 +70,5 @@ const stopSpinning = () => {
     setTimeout(() => {
         const parentSpinner = document.getElementById('spinner');
         parentSpinner.style.display = 'none';
-    }, 2000);
+    }, 1190);
 }
