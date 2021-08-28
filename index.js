@@ -17,7 +17,7 @@ const displayData = (data) => {
     stopSpinning();
 
     if(data == undefined || data == '' || input.value == '' || data == null){
-        searchInfo.innerHTML = `<h1 class="text-center text-muted display-6 fw-bolder align-self-center">Input Something</h1>`
+        searchInfo.innerHTML = `<h1 class="text-center text-muted display-6 fw-bolder align-self-center">Search with a food name(ex. fish)</h1>`
         image.innerHTML = ''
     }
     else{
@@ -43,13 +43,14 @@ const displayData = (data) => {
             }, 1200);
         }
         call();
+        image.innerHTML = ''
     }   
 }
 const topImage = (data) => {
     const image = document.querySelector('#full-image');
     image.innerHTML = `<div class="card col-lg-4 w-80 mx-auto position-relative id="show">
     <img src="${data.strMealThumb}" class="card-img-top" alt="..."> 
-    <button id="cross" class="position-absolute top-0 end-0 border-0 bg-transparent fw-bolder text-warning fx-2 ">X</button>
+    <button id="cross" class="position-absolute top-0 end-0 border-0 bg-transparent fw-bolder text-warning"><h2>X</h2></button>
     <div class="card-body">
       <h5 class="card-title">${data.strMeal}</h5>
       <p class="card-text">${data.strInstructions.slice(0, 200)}</p>
