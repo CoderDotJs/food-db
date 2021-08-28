@@ -47,7 +47,7 @@ const topImage = (data) => {
     const image = document.querySelector('#full-image');
     image.innerHTML = `<div class="card col-lg-4 w-80 mx-auto position-relative id="show">
     <img src="${data.strMealThumb}" class="card-img-top" alt="..."> 
-    <button id="cross" class="position-absolute top-0 end-0 border-0 bg-transparent fw-bolder text-primary fx-2 ">X</button>
+    <button id="cross" class="position-absolute top-0 end-0 border-0 bg-transparent fw-bolder text-danger fx-2 ">X</button>
     <div class="card-body">
       <h5 class="card-title">${data.strMeal}</h5>
       <p class="card-text">${data.strInstructions.slice(0, 200)}</p>
